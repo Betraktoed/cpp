@@ -7,16 +7,15 @@ using namespace std;
 #define RND_DLT(x) (std::rand() % (2 * (x) + 1) - (x))
 #define RND_DPS(a, b) ((a) + std::rand() % ((b) - (a) + 1))
 
-#define SET(x) x
 
 #define DELTA 100000
 
 
 int main(int argc, char** argv){
 
-	CTreeSet<int> M1, M2;
+	CTreeSet<int> M1, M2, M3;
     int i, j;
-
+	std::cin >> M3;
     for(i = 0; i < RND_DPS(100, 1000); i++) {
         M1.makeEmpty();
 
@@ -33,6 +32,7 @@ int main(int argc, char** argv){
 
         std::cout << "M1 = " << M1 << std::endl;
 		std::cout << "M2 = " << M2 << std::endl; 
+		std::cout << "M3 = " << M3 << std::endl;
     }
 	
 	return 0;
