@@ -19,7 +19,9 @@ struct CTreeSet {
 private:
     CTreeSet<CItem> *Left, *Right;
     CItem *Root;
-    int Crr, Flag;
+
+    int Crr, Flag; // FLAG показывает какой элемент надо обойти правый левиы или вернуть корень CRR вернуть глубину дерева
+
 
 public:
     CTreeSet();
@@ -38,7 +40,6 @@ public:
     int abs(void) const;
     int lenght(void) const;
 
-    CItem rightestVal(void) const;
 
     CItem begin(void);
     CItem forward(void);
@@ -366,6 +367,7 @@ std::ostream& operator<<(std::ostream& output, const CTreeSet<CItem>& M) {
         CTreeSet<CItem> copy(M);
         CItem tmp;
         char flag = 1;
+
 
         output << '{';
 
